@@ -14,19 +14,14 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class Employee {
-	private String employeeId;
-	private String firstName;
-	private String lastName;
-	private String idNumber;
-	private String address;
-	
+	private String employeeId;	
+        private Biodata biodata; 
 	private int yearJoined;
 	private int monthJoined;
 	private int dayJoined;
 	private int monthWorkingInYear;
-	
-	private boolean isForeigner;
-	private Gender gender; //true = Laki-laki, false = Perempuan
+	private boolean isForeigner;     
+	private Gender gender; 
 	
 	private int monthlySalary;
 	private int otherMonthlyIncome;
@@ -38,12 +33,9 @@ public class Employee {
 	private List<String> childNames;
 	private List<String> childIdNumbers;
 	
-	public Employee(String employeeId, String firstName, String lastName, String idNumber, String address, int yearJoined, int monthJoined, int dayJoined, boolean isForeigner, Gender gender) {
+	public Employee(String employeeId, Biodata biodata, int yearJoined, int monthJoined, int dayJoined, boolean isForeigner, Gender gender) {
 		this.employeeId = employeeId;
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.idNumber = idNumber;
-		this.address = address;
+                this.biodata = biodata;
 		this.yearJoined = yearJoined;
 		this.monthJoined = monthJoined;
 		this.dayJoined = dayJoined;
@@ -86,10 +78,6 @@ public class Employee {
 		this.otherMonthlyIncome = income;
 	}
 	
-	public void setSpouse(String spouseName, String spouseIdNumber) {
-		this.spouseName = spouseName;
-		this.spouseIdNumber = idNumber;
-	}
 	
 	public void addChild(String childName, String childIdNumber) {
 		childNames.add(childName);
