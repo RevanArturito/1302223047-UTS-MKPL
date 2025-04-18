@@ -19,7 +19,6 @@ public class Employee {
         private Spouse spouse;
 	private LocalDate dateJoined;
         private MonthSalary monthSalary;
-	private int monthWorkingInYear;
 	private boolean isForeigner;     
 	private Gender gender; 
 	
@@ -33,15 +32,14 @@ public class Employee {
             this.gender = gender;
 	}
 	
-	
-//	public int getAnnualIncomeTax() {
-//            LocalDate date = LocalDate.now();
-//            if (date.getYear() == this.dateJoined.getYear()) {
-//                monthWorkingInYear = date.getMonthValue() - this.dateJoined.getMonthValue();
-//            }else {
-//                monthWorkingInYear = 12;
-//            }
-//
-//            return TaxFunction.calculateTax(monthlySalary, otherMonthlyIncome, monthWorkingInYear, annualDeductible, this.spouse.getSpouseIdNumber().equals(""), childIdNumbers.size());
-//	}
+	public int getAnnualIncomeTax() {
+            int monthWorkingInYear;
+            LocalDate date = LocalDate.now();
+            if (date.getYear() == this.dateJoined.getYear()) {
+                monthWorkingInYear = date.getMonthValue() - this.dateJoined.getMonthValue();
+            }else {
+                monthWorkingInYear = 12;
+            }
+            return TaxFunction.calculateTax(this.monthSalary.getMonthlySalary(), this.monthSalary.getOtherMonthlyIncome(), monthWorkingInYear, this.monthSalary.getAnnualDeductible(), this.spouse.getSpouseIdNumber().equals(""), this.spouse.getChildNumber());
+	}
 }

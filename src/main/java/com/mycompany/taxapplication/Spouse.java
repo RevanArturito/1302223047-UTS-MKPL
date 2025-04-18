@@ -41,5 +41,10 @@ public class Spouse {
         this.spouseIdNumber = spouseIdNumber;
     }
     
+    public int getChildNumber() {
+        return child.size();
+    }
+    
+    
     
 }
