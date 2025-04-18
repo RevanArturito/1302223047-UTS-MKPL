@@ -17,9 +17,7 @@ public class Employee {
 	private String employeeId;	
         private Biodata biodata; 
         private Spouse spouse;
-	private int yearJoined;
-	private int monthJoined;
-	private int dayJoined;
+	private LocalDate dateJoined;
 	private int monthWorkingInYear;
 	private boolean isForeigner;     
 	private Gender gender; 
@@ -29,13 +27,11 @@ public class Employee {
 	private int annualDeductible;
 	
 	
-	public Employee(String employeeId, Biodata biodata, int yearJoined, int monthJoined, int dayJoined,Spouse spouse, boolean isForeigner, Gender gender) {
+	public Employee(String employeeId, Biodata biodata, LocalDate dateJoined, Spouse spouse, boolean isForeigner, Gender gender) {
             this.employeeId = employeeId;
             this.biodata = biodata;
             this.spouse = spouse;
-            this.yearJoined = yearJoined;
-            this.monthJoined = monthJoined;
-            this.dayJoined = dayJoined;
+            this.dateJoined = dateJoined;
             this.isForeigner = isForeigner;
             this.gender = gender;
 	}
