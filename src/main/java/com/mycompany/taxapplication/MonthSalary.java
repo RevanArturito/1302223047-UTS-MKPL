@@ -9,7 +9,6 @@ package com.mycompany.taxapplication;
  * @author User
  */
 public class MonthSalary {
-
     private int monthlySalary;
     private int otherMonthlyIncome;
     private int annualDeductible;
