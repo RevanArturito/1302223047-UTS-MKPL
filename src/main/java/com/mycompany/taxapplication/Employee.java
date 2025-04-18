@@ -30,14 +30,14 @@ public class Employee {
 	
 	
 	public Employee(String employeeId, Biodata biodata, int yearJoined, int monthJoined, int dayJoined,Spouse spouse, boolean isForeigner, Gender gender) {
-		this.employeeId = employeeId;
-                this.biodata = biodata;
-                this.spouse = spouse;
-		this.yearJoined = yearJoined;
-		this.monthJoined = monthJoined;
-		this.dayJoined = dayJoined;
-		this.isForeigner = isForeigner;
-		this.gender = gender;
+            this.employeeId = employeeId;
+            this.biodata = biodata;
+            this.spouse = spouse;
+            this.yearJoined = yearJoined;
+            this.monthJoined = monthJoined;
+            this.dayJoined = dayJoined;
+            this.isForeigner = isForeigner;
+            this.gender = gender;
 	}
 	
 	public void setMonthlySalary(int grade) {	
@@ -67,11 +67,6 @@ public class Employee {
 		this.otherMonthlyIncome = income;
 	}
 	
-	
-//	public void addChild(String childName, String childIdNumber) {
-//		childNames.add(childName);
-//		childIdNumbers.add(childIdNumber);
-//	}
 	
 //	public int getAnnualIncomeTax() {
 //		

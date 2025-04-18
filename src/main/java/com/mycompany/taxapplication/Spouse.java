@@ -4,6 +4,8 @@
  */
 package com.mycompany.taxapplication;
 
+import java.util.List;
+
 /**
  *
  * @author User
@@ -11,10 +13,16 @@ package com.mycompany.taxapplication;
 public class Spouse {
     private String spouseName;
     private String spouseIdNumber;
+    private List<Child> child;
 
-    public Spouse(String spouseName, String spouseIdNumber) {
+    public Spouse(String spouseName, String spouseIdNumber, List<Child> child) {
         this.spouseName = spouseName;
         this.spouseIdNumber = spouseIdNumber;
+        this.child = child;
+    }
+    
+    public void addChild(Child child) {
+        this.child.add(child);
     }
 
     public String getSpouseName() {
