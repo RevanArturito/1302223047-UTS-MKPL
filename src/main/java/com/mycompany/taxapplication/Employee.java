@@ -18,49 +18,19 @@ public class Employee {
         private Biodata biodata; 
         private Spouse spouse;
 	private LocalDate dateJoined;
+        private MonthSalary monthSalary;
 	private int monthWorkingInYear;
 	private boolean isForeigner;     
 	private Gender gender; 
 	
-	private int monthlySalary;
-	private int otherMonthlyIncome;
-	private int annualDeductible;
-	
-	
-	public Employee(String employeeId, Biodata biodata, LocalDate dateJoined, Spouse spouse, boolean isForeigner, Gender gender) {
+	public Employee(String employeeId, Biodata biodata, LocalDate dateJoined, Spouse spouse, MonthSalary monthSalary, boolean isForeigner, Gender gender) {
             this.employeeId = employeeId;
             this.biodata = biodata;
             this.spouse = spouse;
             this.dateJoined = dateJoined;
+            this.monthSalary = monthSalary;
             this.isForeigner = isForeigner;
             this.gender = gender;
-	}
-	
-	public void setMonthlySalary(int grade) {	
-		if (grade == 1) {
-			monthlySalary = 3000000;
-			if (isForeigner) {
-				monthlySalary = (int) (3000000 * 1.5);
-			}
-		}else if (grade == 2) {
-			monthlySalary = 5000000;
-			if (isForeigner) {
-				monthlySalary = (int) (3000000 * 1.5);
-			}
-		}else if (grade == 3) {
-			monthlySalary = 7000000;
-			if (isForeigner) {
-				monthlySalary = (int) (3000000 * 1.5);
-			}
-		}
-	}
-	
-	public void setAnnualDeductible(int deductible) {	
-		this.annualDeductible = deductible;
-	}
-	
-	public void setAdditionalIncome(int income) {	
-		this.otherMonthlyIncome = income;
 	}
 	
 	
