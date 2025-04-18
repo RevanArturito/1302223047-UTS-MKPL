@@ -31,7 +31,5 @@ public class Child {
 
     public void setChildIdNumber(String ChildIdNumber) {
         this.ChildIdNumber = ChildIdNumber;
-    }
-    
-    
+    } 
 }
